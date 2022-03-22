@@ -6,12 +6,11 @@ public class Main {
     public static void main(String[] args) {
         FilterEmail filterEmail = new FilterEmail();
 
-//        filterEmail.mensajesRepetidos();
+        filterEmail.mensajesRepetidos();
 //        filterEmail.dominiosDelMail();
 //        filterEmail.condicionesDelCorreo();
 //        filterEmail.cantidadDeCorreos();
 //        filterEmail.cantidadDeTiposDeCorreos();
 //        filterEmail.estadoDelMensaje();
-
     }
 }

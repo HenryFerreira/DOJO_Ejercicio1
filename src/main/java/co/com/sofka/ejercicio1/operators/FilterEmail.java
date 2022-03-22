@@ -21,6 +21,8 @@ public class FilterEmail {
     public void dominiosDelMail() {
         Flux<Email> emailFlux = Flux.fromIterable(emails);
 
+        /*Consideramos mas apropiado el uso de un GroupBy en lugar de un filter*/
+
         Flux.fromIterable(emails)
                 .groupBy(Email::getTipoEmail)
                 .flatMap(idFlux -> idFlux.collectList())
@@ -32,6 +34,8 @@ public class FilterEmail {
 
     public void condicionesDelCorreo() {
         Flux<Email> emailFlux = Flux.fromIterable(emails);
+
+        /*Consideramos mas apropiado el uso de un filter en lugar de un map*/
 
         Flux.fromIterable(emails)
                 .filter(e -> {
